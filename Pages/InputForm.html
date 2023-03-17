@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 InputForm</title>
+    <link rel="stylesheet" href="../CSS/InputForm.css">
+</head>
+<body>
+    <h1 class="headerContainer">HTML5 InputForm</h1>
+    <form>
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name">
+        </div>
+        <div>
+            <label for="pwd">Password</label>
+            <input type="password" id="pwd">
+        </div>
+        <div>
+            <label for="email">Email</label>
+            <input type="email" id="email">
+            </div>
+        <div>
+            <label for="url">Url</label>
+            <input type="url" id="url">
+        </div>
+        <div>
+            <label for="number">Phone Number</label>
+            <input type="number" id="number">
+        </div>
+        <div>
+            <label for="tel">Telephone Number</label>
+            <input type="tel" id="tel">
+        </div>
+        <div>
+            <label for="search">Search</label>
+            <input type="search" id="search">
+        </div>
+        <div>
+            <label for="date">Date</label>
+            <input type="datetime-local" id="date">
+        </div>
+        <div>
+            <label for="salary">Salary</label>
+            <input type="range" id="salary" min="10000" max="500000" step="1000" value="40000">
+            <salary-output id="salaryOutput">40000</salary-output>
+        </div>
+        <div>
+            <input type="submit" value="Submit" class="btn">
+        </div>
+    </form>
+</body>
+</html>
