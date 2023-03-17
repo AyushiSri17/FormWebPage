@@ -105,7 +105,7 @@
         let passwordError=document.querySelector('.password-error');
         password.addEventListener('input',function()
         {
-            let passwordRegex=RegExp('^[a-zA-Z0-9]{8,}$');
+            let passwordRegex=RegExp('^(?=.*[A-Z])(?=.*[0-9])(?=.*[@#$?^&]).{8,}$');
             if(passwordRegex.test(password.value))
                     passwordError.textContent="";
             else
