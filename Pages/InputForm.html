@@ -13,7 +13,7 @@
         <div>
             <label for="name">Name</label>
             <input type="text" id="name">
-            <span class="text-error">Enter name</span>
+            <span class="text-error"></span>
         </div>
         <div>
             <label for="pwd">Password</label>
@@ -22,7 +22,8 @@
         <div>
             <label for="email">Email</label>
             <input type="email" id="email">
-            </div>
+            <span class="email-error"></span>
+        </div>
         <div>
             <label for="url">Url</label>
             <input type="url" id="url">
@@ -73,6 +74,17 @@
                     error.textContent="Name is invalid";
         });
         
+        /*email Validation*/
+        let email=document.querySelector('#email');
+        let emailError=document.querySelector('.email-error');
+        email.addEventListener('input',function()
+        {
+            let emailRegex=RegExp('^[a-z]{3,}[.a-z]*[@][a-z]{2,}[.][a-z]{2,}[.a-z]*$');
+            if(emailRegex.test(email.value))
+                   emailError.textContent="";
+            else
+                    emailError.textContent="Email is invalid";
+        });
     </script>
 </body>
 </html>
