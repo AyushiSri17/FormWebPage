@@ -13,6 +13,7 @@
         <div>
             <label for="name">Name</label>
             <input type="text" id="name">
+            <span class="text-error">Enter name</span>
         </div>
         <div>
             <label for="pwd">Password</label>
@@ -51,5 +52,27 @@
             <input type="submit" value="Submit" class="btn">
         </div>
     </form>
+    <script>
+        let salary=document.querySelector('#salary');
+        let output=document.querySelector('#salaryOutput');
+        output.textContent=salary.value;
+        salary.addEventListener('input',function()
+        {
+            output.textContent=salary.value;
+        });
+        
+        /*Name Validation*/
+        let text=document.querySelector('#name');
+        let error=document.querySelector('.text-error');
+        text.addEventListener('input',function()
+        {
+            let nameRegex=RegExp('^[A-Z]{1}[a-z]{2,}$');
+            if(nameRegex.test(text.value))
+                   error.textContent="";
+            else
+                    error.textContent="Name is invalid";
+        });
+        
+    </script>
 </body>
 </html>

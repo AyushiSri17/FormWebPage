@@ -47,3 +47,8 @@ input
         font-size: 14px;
     }
 }
+.text-error
+{
+    font-size: 10px;
+    color:red;
+}
